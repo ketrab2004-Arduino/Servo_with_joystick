@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include <Servo.h>
 
+#define SERIAL_PRINT 0
+
 #define XPINOUT 4
 #define YPINOUT 3
 
@@ -21,20 +23,24 @@ void setup() {
     servoX.write(90);
     servoY.write(90);
 
+    #if SERIAL_PRINT
     Serial.begin(9600);
 
     delay(5000);
     Serial.println(F("begin!"));
+    #endif
 }
 
 void loop() {
     int inX = analogRead(XPININ);
     int inY = analogRead(YPININ);
 
+    #if SERIAL_PRINT
     Serial.print(F("  X:"));
     Serial.println(inX);
     Serial.print(F("  Y:"));
     Serial.println(inY);
+    #endif
 
     servoX.write(
         map(
@@ -56,6 +62,7 @@ void loop() {
         )
     );
 
+    #if SERIAL_PRINT
     Serial.println(F("Mapped:"));
     Serial.print(F("  x:"));
     Serial.println(map(
@@ -76,4 +83,5 @@ void loop() {
     Serial.println(F("=========="));
 
     //delay(1000);
+    #endif
 }

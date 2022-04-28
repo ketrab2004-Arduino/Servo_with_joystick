@@ -21,6 +21,7 @@
         * X-axis/horizontal into a digital input (default is 4)
         * Y-axis/vertical into a digital input (default is 3)
 1. Change your settings in main.cpp
+    * `SERIAL_PRINT` if you would like `Serial.print` debug messages
     * `XPINOUT` if you use a different pin for the horizontal servo
     * `YPINOUT` if you use a different pin for the vertical servo
     * `XPININ` if you use a different analogue pin for the horizontal input from the joystick
