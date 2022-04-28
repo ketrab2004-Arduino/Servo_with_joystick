@@ -26,7 +26,7 @@
 1. Upload the program
 1. Control the servos :)
 
-### [Video](https://youtu.be/YO_YPF3o6Eg)
+#### [Video](https://youtu.be/YO_YPF3o6Eg)
 
 ## Fritzing Sketch:
 ![A Fritzing sketch exported to a png. Showing orange wires for the horizontal servo and red for the vertical servo.](./memorabilia/Sketch.png)
