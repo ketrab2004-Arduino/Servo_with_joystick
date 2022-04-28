@@ -4,8 +4,9 @@
 
 ## Parts:
 * Arduino (an Uno should be enough)
-* 2 Servos (small enough that your arduino can power them both without an external power source)
 * A joystick
+* 2 Servos (small enough that your arduino can power them both without an external power source)
+* A breadboard (only if you want to see the wires better)
 
 ## Setup:
 1. Attach the joystick
