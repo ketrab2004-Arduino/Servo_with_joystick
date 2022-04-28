@@ -1,20 +1,21 @@
 #include <Arduino.h>
 #include <Servo.h>
 
-#define YPINOUT 3
 #define XPINOUT 4
-Servo servoY;
+#define YPINOUT 3
+
 Servo servoX;
+Servo servoY;
 
 void setup() {
-    pinMode(YPINOUT, OUTPUT);
     pinMode(XPINOUT, OUTPUT);
+    pinMode(YPINOUT, OUTPUT);
 
-    servoY.attach(YPINOUT);
     servoX.attach(XPINOUT);
+    servoY.attach(YPINOUT);
 
-    servoY.write(90);
     servoX.write(90);
+    servoY.write(90);
 
     Serial.begin(9600);
 
@@ -31,16 +32,6 @@ void loop() {
     Serial.print(F("  Y:"));
     Serial.println(inY);
 
-    servoY.write(
-        map(
-            inY,
-            0,
-            1023,
-            0,
-            180
-        )
-    );
-
     servoX.write(
         map(
             inX,
@@ -51,18 +42,28 @@ void loop() {
         )
     );
 
-    Serial.println(F("Mapped:"));
-    Serial.print(F("  y:"));
-    Serial.println(map(
+    servoY.write(
+        map(
             inY,
             0,
             1023,
             0,
             180
-        ));
+        )
+    );
+
+    Serial.println(F("Mapped:"));
     Serial.print(F("  x:"));
     Serial.println(map(
             inX,
+            0,
+            1023,
+            0,
+            180
+        ));
+    Serial.print(F("  y:"));
+    Serial.println(map(
+            inY,
             0,
             1023,
             0,

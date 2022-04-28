@@ -21,8 +21,8 @@
         * X-axis/horizontal into a digital input (default is 4)
         * Y-axis/vertical into a digital input (default is 3)
 1. Change your settings in main.cpp
-    * `YPINOUT` if you use a different pin for the vertical servo
     * `XPINOUT` if you use a different pin for the horizontal servo
+    * `YPINOUT` if you use a different pin for the vertical servo
 1. Upload the program
 1. Control the servos :)
 
