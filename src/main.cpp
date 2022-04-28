@@ -4,6 +4,10 @@
 #define XPINOUT 4
 #define YPINOUT 3
 
+// analogue:
+#define XPININ 0
+#define YPININ 1
+
 Servo servoX;
 Servo servoY;
 
@@ -24,8 +28,8 @@ void setup() {
 }
 
 void loop() {
-    int inX = analogRead(0);
-    int inY = analogRead(1);
+    int inX = analogRead(XPININ);
+    int inY = analogRead(YPININ);
 
     Serial.print(F("  X:"));
     Serial.println(inX);

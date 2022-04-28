@@ -23,6 +23,8 @@
 1. Change your settings in main.cpp
     * `XPINOUT` if you use a different pin for the horizontal servo
     * `YPINOUT` if you use a different pin for the vertical servo
+    * `XPININ` if you use a different analogue pin for the horizontal input from the joystick
+    * `YPININ` if you use a different analogue pin for the vertical input from the joystick
 1. Upload the program
 1. Control the servos :)
 
